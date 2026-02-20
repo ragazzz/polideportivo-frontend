@@ -46,19 +46,19 @@ export function WeekView({
     <>
       <div className="w-full h-full bg-white overflow-auto">
         {/* Sticky header */}
-        <div className="sticky top-0 z-10 bg-white border-b-2 border-neutral-600">
+        <div className="sticky top-0 z-10 bg-white border-b-2 border-[#fcf9f9]">
           <div className="grid grid-cols-[100px_repeat(7,1fr)] gap-0">
-            <div className="bg-gray-100 border-r-2 border-neutral-600 p-2" />
+            <div className="bg-[#0F1252] border-r-2 border-[#fcf9f9] p-2" />
 
             {days.map((day, idx) => (
               <div 
                 key={idx}
-                className="bg-gray-100 border-r border-neutral-600 p-3 text-center"
+                className="bg-[#0F1252] border-r border-[#fcf9f9] p-3 text-center"
               >
-                <div className="text-sm font-bold capitalize" style={{ userSelect: 'none' }}>
+                <div className="text-sm text-[#D9DCD9] font-bold capitalize" style={{ userSelect: 'none' }}>
                   {format(day, 'EEE', { locale: es })}
                 </div>
-                <div className="text-xs text-gray-600" style={{ userSelect: 'none' }}>
+                <div className="text-sm text-[#D9DCD9] font-bold" style={{ userSelect: 'none' }}>
                   {format(day, 'd MMM', { locale: es })}
                 </div>
               </div>
@@ -71,8 +71,8 @@ export function WeekView({
           {hours.map((hour) => (
             <React.Fragment key={hour}>
               {/* Hour label */}
-              <div className="border-b border-r-2 border-neutral-600 p-2 flex items-center justify-center bg-gray-50 sticky left-0 z-5">
-                <span className="text-sm font-semibold" style={{ userSelect: 'none' }}>
+              <div className="border-b border-r-2 border-[#fcf9f9] p-2 flex items-center justify-center bg-[#0F1252] sticky left-0 z-5">
+                <span className="text-sm text-[#D9DCD9] font-semibold" style={{ userSelect: 'none' }}>
                   {`${hour}:00`}
                 </span>
               </div>
@@ -99,10 +99,10 @@ export function WeekView({
 
                 const isDisabled = isPastDay || isPastHourToday;
 
-                let bgColor = 'bg-lime-200';
-                let bgColorHover = 'bg-lime-200';
-                let textColor = 'text-lime-600';
-                let textColorHover = 'text-lime-700';
+                let bgColor = 'bg-lime-400';
+                let bgColorHover = 'bg-lime-400';
+                let textColor = 'text-black';
+                let textColorHover = 'text-black';
                 let displayText = 'Disponible';
 
                 if (isDisabled) {
@@ -113,10 +113,10 @@ export function WeekView({
                   displayText = '-';
                 } 
                 else if (slot.status === 'reserved') {
-                  bgColor = 'bg-orange-200';
-                  bgColorHover = 'bg-amber-600';
-                  textColor = 'text-orange-600';
-                  textColorHover = 'text-orange-200';
+                  bgColor = 'bg-orange-400';
+                  bgColorHover = 'bg-amber-700';
+                  textColor = 'text-black';
+                  textColorHover = 'text-black';
                   displayText = 'Reservado';
                 }
 
@@ -129,7 +129,7 @@ export function WeekView({
                       }
                     }}
                     className={`
-                      border-b border-r border-neutral-600
+                      border-b border-r border-[#fcf9f9]
                       group p-2 flex items-center justify-center min-h-16
                       transition-colors duration-200
                       ${bgColor}

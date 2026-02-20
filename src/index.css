@@ -2,7 +2,16 @@
 @theme {
     --font-map: 'Coiny', sans-serif;
 };
-@source inline('bg-lime-200 bg-orange-200 bg-gray-100 bg-amber-600 bg-gray-300 text-lime-500 text-orange-500 text-neutral-600 text-orange-200 text-gray-500 hover:bg-lime-200 hover:bg-amber-600 hover:bg-gray-300 group-hover:text-lime-500 group-hover:text-orange-200 group-hover:text-gray-500');
+@source inline('bg-lime-200 bg-orange-200 bg-gray-100 bg-amber-800 bg-gray-300 text-lime-500 text-orange-500 text-neutral-600 text-orange-200 text-gray-500 hover:bg-lime-200 hover:bg-amber-700 hover:bg-gray-300 group-hover:text-lime-500 group-hover:text-orange-200 group-hover:text-gray-500');
 html {
     font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+    .font-outline-1 {
+    -webkit-text-stroke: 1.5px black;
+    }
+    .font-outline-2 {
+    -webkit-text-stroke: 1px black;
+    }
 }

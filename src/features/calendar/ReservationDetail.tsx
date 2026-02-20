@@ -38,25 +38,25 @@ export function ReservationDetail({
                 {/* Content */}
                 <div className="space-y-4 overflow-y-auto pr-2">
                 {/* Horario */}
-                <div className="text-center bg-orange-100 rounded-lg p-4 border-2 border-orange-300">
-                    <p className="text-3xl font-bold text-gray-800">
+                <div className="text-center bg-orange-400 rounded-lg p-4">
+                    <p className="text-3xl font-extrabold font-outline-1 text-[#fcf9f9]">
                     {format(reservation.startDatetime, 'H:mm')} - {format(reservation.endDatetime, 'H:mm')}
                     </p>
-                    <p className="text-lg text-gray-700 mt-2 capitalize">
+                    <p className="text-xl font-extrabold font-outline-2 text-[#fcf9f9] mt-2 capitalize">
                     {format(reservation.startDatetime, "EEEE d 'de' MMMM", { locale: es })}
                     </p>
                 </div>
 
                 {/* Responsable */}
                 <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Responsable</p>
+                    <p className="text-sm text-[#0e183f] font-bold mb-1">Responsable</p>
                     <p className="text-lg text-gray-800">{reservation.responsable}</p>
                 </div>
 
                 {/* Perfil */}
                 {reservation.perfil && (
                     <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Perfil</p>
+                    <p className="text-sm text-[#0e183f] font-semibold mb-1">Perfil</p>
                     <p className="text-lg text-gray-800">{reservation.perfil}</p>
                     </div>
                 )}
@@ -64,7 +64,7 @@ export function ReservationDetail({
                 {/* Disciplina */}
                 {reservation.disciplina && (
                     <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Disciplina</p>
+                    <p className="text-sm text-[#0e183f] font-semibold mb-1">Disciplina</p>
                     <p className="text-lg text-gray-800">{reservation.disciplina}</p>
                     </div>
                 )}
@@ -72,7 +72,7 @@ export function ReservationDetail({
                 {/* Actividad */}
                 {reservation.actividad && (
                     <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Actividad</p>
+                    <p className="text-sm text-[#0e183f] font-semibold mb-1">Actividad</p>
                     <p className="text-gray-800">{reservation.actividad}</p>
                     </div>
                 )}
@@ -80,7 +80,7 @@ export function ReservationDetail({
                 {/* Carrera */}
                 {reservation.carrera && reservation.carrera !== 'NO REGISTRA' && (
                     <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Carrera</p>
+                    <p className="text-sm text-[#0e183f] font-semibold mb-1">Carrera</p>
                     <p className="text-lg text-gray-800">{reservation.carrera}</p>
                     </div>
                 )}
@@ -88,7 +88,7 @@ export function ReservationDetail({
                 {/* Modalidad */}
                 {reservation.modalidad && reservation.modalidad !== 'NO REGISTRA' && (
                     <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Modalidad</p>
+                    <p className="text-sm text-[#0e183f] font-semibold mb-1">Modalidad</p>
                     <p className="text-lg text-gray-800">{reservation.modalidad}</p>
                     </div>
                 )}

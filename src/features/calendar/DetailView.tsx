@@ -5,6 +5,7 @@ import { ThreeDayView } from "./ThreeDayView";
 import { WeekView } from "./WeekView";
 import { MonthView } from "./MonthView";
 import { getFacilityDisplayName } from "../../shared/utils/reservationUtils";
+import logo from '../../assets/logo-unemi.png'
 
 interface DetailViewProps {
     facilityId: string;
@@ -87,9 +88,12 @@ export function DetailView({
                     <h1 className="text-3xl font-bold text-[#0e183f]" style={{userSelect:'none'}}>
                     {displayName}
                     </h1>
-                    <p className="text-sm text-gray-500 mt-1" style={{userSelect:'none'}}>
+                    <p className="text-sm text-[#0e183f] font-bold mt-1" style={{userSelect:'none'}}>
                     {viewTitles[currentView]}
                     </p>
+                </div>
+                <div>
+                    <img src={logo} width={400} alt="Logo del Centro de Formación y Promoción del Deporte Universitario" draggable={"false"} />
                 </div>
 
                 {/* Close button */}
